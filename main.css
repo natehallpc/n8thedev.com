@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
 
 html {
+    height: 100%;
     font-family: 
     "IBM Plex Sans",
     courier;
@@ -14,19 +15,22 @@ html {
 body {
     display: flex;
     flex-direction: row;
-    justify-content: center  ;
+    justify-content: center;
+    height: 100%;
+    overflow: scroll;
 }
 
 .main-content {
-    text-align: center;
+    text-align: flex-start;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
-    height: 100vh;
+    height: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
-.sidebar {
+nav {
     margin-left: 50rem;
     min-width: 5rem;
     display: flex;
@@ -35,17 +39,25 @@ body {
     justify-content: center;
     height: 100vh;
     position: fixed;
-}
-
-.sidebar span {
+    color: gray;
 }
 
 h1 {
+    line-height: 4rem;
+    margin-bottom: 0.5rem;
+    font-size: 4rem;
+}
+
+h1 + p {
+    margin-top: 0;
+}
+
+h2 {
     margin-bottom: 0rem;
     font-size: 3rem;
 }
 
-h1 + p {
+h2 + p {
     margin-top: 0;
 }
 
@@ -54,10 +66,11 @@ p + span {
     line-height: 0.5rem;
 }
 
+/* Social media link icons */
 span + span {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 1rem;
 }
 
@@ -79,6 +92,19 @@ p {
 }
 
 li a {
-    color: black;
+    color: gray;
     text-decoration: none;
+}
+
+.card-spacer {
+    padding-top: 16vh;
+    padding-bottom: 16vh;
+}
+
+#meet-nate-label {
+    color: black;
+}
+
+#meet-nate-label a {
+    color: black;
 }
